@@ -3,9 +3,86 @@ body {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
+    margin: 0;
 }
 
-div {
+main {
+    display: grid;
+    width: 805px;
+    grid-template-columns: 135px 350px 250px;
+    grid-gap: 35px;
+    margin: 95px auto 0 auto;
+    /* shorthand of main  div 
+    
+    & div {
+        background-color: yellow;
+    }
+    */
+}
+
+div#logo {
     display: grid;
     place-items: center;
+    border-right: 1px dashed rgb(153, 153, 153);
+}
+
+div#foto img {
+    display: block;
+    transition: all 0.5s ease-in-out;
+    color: yellow;
+    /* rotate horizontally */
+    transform: rotate(180deg);
+    filter: blur(2px);
+}
+
+main#root:hover div#foto img {
+    outline: 1rem solid yellow;
+    transform: rotate(0deg);
+    filter: blur(0);
+}
+
+div#story {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 175px;
+
+    & p,
+    h2 {
+        margin: 0;
+    }
+}
+
+div#story article {
+    font-family: 'Times New Roman', Times, serif;
+    & h2 {
+        margin-bottom: 1rem;
+        color: rgb(234, 234, 234);
+        font-size: 2.4rem;
+        font-weight: lighter;
+
+        & span {
+            font-size: 1.5rem;
+        }
+    }
+    & p.quote {
+        margin-bottom: 1rem;
+        font-size: 1.35rem;
+        line-height: 1.5rem;
+    }
+
+    & p.author {
+        color: rgb(153, 153, 153);
+        font-size: 1rem;
+    }
+    & p.year {
+        color: rgb(153, 153, 153);
+        font-size: 0.7rem;
+    }
+}
+
+div#story .copyright {
+    font-size: 0.8rem;
+    color: rgb(225, 225, 225);
 }
