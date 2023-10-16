@@ -8,4 +8,10 @@ body {
 div {
     display: grid;
     place-items: center;
+
+}
+
+div#Marvin h1 {
+    text-align: ;
+    grid-template-columns: 1f 1fr 1fr;
 }
